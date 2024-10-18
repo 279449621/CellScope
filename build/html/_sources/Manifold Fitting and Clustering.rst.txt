@@ -1,7 +1,7 @@
 Manifold Fitting and Clustering
 ============================
 
-This dataset consists of 4,714 cells from the Red Nucleus region of the Midbrain, as part of the Human Brain Cell Atlas. It is freely available on the CELLxGENE website in h5ad format and can be downloaded via the following link: https://datasets.cellxgene.cziscience.com/5488ff72-58ed-4f0d-913c-1b6d4d8412b1.h5ad.
+This dataset consists of 4714 cells from the Red Nucleus region of the Midbrain, as part of the Human Brain Cell Atlas. It is freely available on the CELLxGENE website in h5ad format and can be downloaded via the following link: https://datasets.cellxgene.cziscience.com/5488ff72-58ed-4f0d-913c-1b6d4d8412b1.h5ad.
 
 Data Download and Reading
 -------------------------

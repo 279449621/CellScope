@@ -6,5 +6,5 @@ Tutorials
    :caption: Tutorials
 
    Manifold Fitting and Clustering
-   Tree Structures Construction
+   Tree Structure Construction
    Gene Analysis
