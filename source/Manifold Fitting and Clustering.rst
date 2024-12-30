@@ -9,26 +9,15 @@ It is available for free download in **txt.gz** format from the **GEO** database
 Data Download and Reading
 ----------------------------------------------------
 
-Load the **gene expression matrix** and **cell type labels** using `loadmat <https://anndata.readthedocs.io/en/latest/>`_. 
+Load the **gene expression matrix** and **cell type labels** using `loadmat`. 
 (If cell type labels are unavailable, it won’t affect the subsequent analysis).
 
 .. code-block:: python
-
-    import requests
-    import anndata
-    import CellScope
-    url = "https://datasets.cellxgene.cziscience.com/5488ff72-58ed-4f0d-913c-1b6d4d8412b1.h5ad"
-    file_path = "Siletti-1.h5ad"
-    response = requests.get(url, stream=True)
-    if response.status_code == 200:
-        with open(file_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-    adata = anndata.read_h5ad("Siletti-1.h5ad")
-    fea_raw = adata.X
-    cell_types = adata.obs['cell_type']
-    label = np.array(cell_types)
-
+    from scipy.io import loadmat
+    data_name = 'GSE59739.mat'
+    Data = loadmat(data_name)
+    fea_raw = Data['fea_raw']
+    cell_type = Data['label_1_numr']
 Normalization
 ----------------
 **Data normalization** should be performed before downstream analysis.
