@@ -6,18 +6,20 @@ For more details, refer to the `description <https://www.ncbi.nlm.nih.gov/geo/qu
 It is available for free download in **txt.gz** format from the **GEO** database via this link: `Download Link <https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE59739&format=file&file=GSE59739%5FDataTable%2Etxt%2Egz>`_.
 
 
-Data Download and Reading
+Data Reading
 ----------------------------------------------------
 
 Load the **gene expression matrix** and **cell type labels** using `loadmat`. 
 (If cell type labels are unavailable, it won’t affect the subsequent analysis).
 
 .. code-block:: python
+
     from scipy.io import loadmat
     data_name = 'GSE59739.mat'
     Data = loadmat(data_name)
     fea_raw = Data['fea_raw']
     cell_type = Data['label_1_numr']
+
 Normalization
 ----------------
 **Data normalization** should be performed before downstream analysis.
